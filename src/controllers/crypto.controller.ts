@@ -1,16 +1,16 @@
 import { Controller, Get, Query, Res } from '@nestjs/common';
-import { AppService } from '../services/app.service';
+import { CryptoService } from '../services/crypto.service';
 
 @Controller()
 export class CryptoController {
-  constructor(private readonly appService: AppService) {}
+  constructor(private readonly cryptoService: CryptoService) {}
 
-  @Get('/getAssetPrice')
+  @Get('/price')
   getAssetPrice(@Query('asset') asset:string): string {
     if (asset == null)
         return 'This asset is not supported'
     else if(asset == 'BTC' || asset == 'ETH')
-        return this.appService.getHello();
+        return this.cryptoService.getCryptoPrice(asset);
     else
         return 'asset should be either BTC or ETH, not empty'
 }
