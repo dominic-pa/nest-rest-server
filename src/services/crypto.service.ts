@@ -1,7 +1,7 @@
 import { HttpService } from '@nestjs/axios';
 import { Injectable } from '@nestjs/common';
 import { map, Observable } from 'rxjs';
-import { CryptoAssetResponse } from 'src/interfaces/Interfaces';
+import { CryptoAssetResponse } from 'interfaces/Interfaces';
 
 
 @Injectable()

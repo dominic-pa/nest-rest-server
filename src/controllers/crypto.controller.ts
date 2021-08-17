@@ -1,6 +1,6 @@
 import { Controller, Get, Query, Res } from '@nestjs/common';
 import { Observable } from 'rxjs';
-import { CryptoErrorResponse } from 'src/interfaces/Interfaces';
+import { CryptoErrorResponse } from 'interfaces/Interfaces';
 import { CryptoService } from '../services/crypto.service';
 import { of } from 'rxjs';
 
